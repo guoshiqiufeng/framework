@@ -38,9 +38,9 @@
 
     <!--scm信息-->
     <scm>
-        <url>https://gitee.com/fubluesky/framework.git</url>
-        <connection>scm:git:https://gitee.com/fubluesky/framework.git</connection>
-        <developerConnection>scm:git:https://gitee.com/fubluesky/framework.git</developerConnection>
+        <url>https://github.com/guoshiqiufeng/framework.git</url>
+        <connection>scm:git:https://github.com/guoshiqiufeng/framework.git</connection>
+        <developerConnection>scm:git:https://github.com/guoshiqiufeng/framework.git</developerConnection>
     </scm>
 
     <licenses>

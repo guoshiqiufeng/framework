@@ -13,6 +13,7 @@ import java.util.Date;
 
 /**
  * 时间序列化
+ *
  * @author yanghq
  */
 public class CustomDateSerializer {
