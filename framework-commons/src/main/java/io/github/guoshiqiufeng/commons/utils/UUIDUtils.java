@@ -1,4 +1,4 @@
-package io.github.guoshiqiufeng.commons;
+package io.github.guoshiqiufeng.commons.utils;
 
 import java.util.UUID;
 
