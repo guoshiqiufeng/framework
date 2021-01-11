@@ -6,7 +6,7 @@
     <groupId>io.github.guoshiqiufeng</groupId>
     <artifactId>framework</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0.RELEASE</version>
+    <version>1.0.1.RELEASE</version>
     <inceptionYear>2020-Now</inceptionYear>
     <description>通用框架</description>
 
@@ -38,9 +38,9 @@
 
     <!--scm信息-->
     <scm>
-        <url>https://gitee.com/fubluesky/framework.git</url>
-        <connection>scm:git:https://gitee.com/fubluesky/framework.git</connection>
-        <developerConnection>scm:git:https://gitee.com/fubluesky/framework.git</developerConnection>
+        <url>https://github.com/guoshiqiufeng/framework.git</url>
+        <connection>scm:git:https://github.com/guoshiqiufeng/framework.git</connection>
+        <developerConnection>scm:git:https://github.com/guoshiqiufeng/framework.git</developerConnection>
     </scm>
 
     <licenses>
@@ -264,45 +264,8 @@
         </plugins>
     </build>
 
-    <!-- 不同的打包环境 -->
-    <profiles>
-        <!-- 生产环境 -->
-        <profile>
-            <id>prod</id>
-            <properties>
-                <profileActive>prod</profileActive>
-            </properties>
-            <build>
-                <finalName>${project.artifactId}-${project.version}</finalName>
-            </build>
-        </profile>
-        <!-- 开发环境 -->
-        <profile>
-            <id>dev</id>
-            <properties>
-                <profileActive>dev</profileActive>
-            </properties>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <build>
-                <finalName>${project.artifactId}-${project.version}</finalName>
-            </build>
-        </profile>
-        <!-- 测试环境 -->
-        <profile>
-            <id>test</id>
-            <properties>
-                <profileActive>test</profileActive>
-            </properties>
-            <build>
-                <finalName>${project.artifactId}-${project.version}</finalName>
-            </build>
-        </profile>
-    </profiles>
-
     <modules>
-        <module>framework-commons</module>
+        <module>framework-core</module>
         <module>framework-date</module>
     </modules>
 </project>

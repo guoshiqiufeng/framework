@@ -25,14 +25,22 @@
 
 
 #### 安装教程
+只需要localDate序列化、反序列化
 ```xml
 <dependency>
     <groupId>io.github.guoshiqiufeng</groupId>
     <artifactId>framework-date</artifactId>
-    <version>1.0.0.RELEASE</version>
+    <version>1.0.1.RELEASE</version>
 </dependency>
 ```
-
+还需要使用其他util
+```xml
+<dependency>
+    <groupId>io.github.guoshiqiufeng</groupId>
+    <artifactId>framework-core</artifactId>
+    <version>1.0.1.RELEASE</version>
+</dependency>
+```
 #### 使用说明
 
 ##### spring boot localDateTime 序列化 反序列化

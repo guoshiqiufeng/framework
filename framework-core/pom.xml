@@ -3,12 +3,12 @@
     <parent>
         <groupId>io.github.guoshiqiufeng</groupId>
         <artifactId>framework</artifactId>
-        <version>1.0.0.RELEASE</version>
+        <version>1.0.1.RELEASE</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>framework-commons</artifactId>
-    <description>通用依赖相关</description>
+    <artifactId>framework-core</artifactId>
+    <description>核心相关</description>
     <inceptionYear>2020-Now</inceptionYear>
     <packaging>jar</packaging>
 
@@ -23,6 +23,11 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
