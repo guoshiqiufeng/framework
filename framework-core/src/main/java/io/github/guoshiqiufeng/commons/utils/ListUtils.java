@@ -15,8 +15,8 @@ public class ListUtils {
 
 	/**
 	 * 判断是否不为空
-	 * @param list
-	 * @return boolean
+	 * @param list list对象
+	 * @return boolean 非空返回true,空则返回false
 	 */
 	public static boolean isNotEmpty(List<?> list) {
 		return list != null && list.size() > 0;
@@ -24,8 +24,8 @@ public class ListUtils {
 
 	/**
 	 * 判断是否为空
-	 * @param list
-	 * @return boolean
+	 * @param list list对象
+	 * @return boolean 空返回true,非空则返回false
 	 */
 	public static boolean isEmpty(List<?> list) {
 		return list == null || list.size() == 0;
@@ -35,7 +35,8 @@ public class ListUtils {
 	 * 转化
 	 * @param obj list对象
 	 * @param clazz 转换的类
-	 * @return list
+	 * @param <T> clazz的类
+	 * @return list 转换后的list
 	 */
 	public static <T> List<T> castList(Object obj, Class<T> clazz) {
 		List<T> result = new ArrayList<T>();
