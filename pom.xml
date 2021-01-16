@@ -6,7 +6,7 @@
     <groupId>io.github.guoshiqiufeng</groupId>
     <artifactId>framework</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.3.RELEASE</version>
+    <version>1.0.4</version>
     <inceptionYear>2020-Now</inceptionYear>
     <description>通用框架</description>
 
@@ -25,6 +25,8 @@
 
         <!-- Spring Projects -->
         <spring-boot.version>2.3.6.RELEASE</spring-boot.version>
+
+        <knife4j.version>2.0.8</knife4j.version>
 
         <!--插件-->
         <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
@@ -81,6 +83,12 @@
                 <version>${spring-boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <!--Swagger-->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-micro-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -271,5 +279,6 @@
         <module>framework-all</module>
         <module>framework-core</module>
         <module>framework-date</module>
+        <module>framework-swagger</module>
     </modules>
 </project>
