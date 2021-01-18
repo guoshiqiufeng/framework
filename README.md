@@ -19,6 +19,7 @@
 
 | 名称         | 模块     |  |
 | ------------ | -------- | ------ |
+| 阿里云oss | oss-ali-boot-starter | |
 | 通用依赖         | framework-commons  |    |
 | 时间序列化配置         | framework-date  |    |
 
@@ -30,7 +31,7 @@
 <dependency>
     <groupId>io.github.guoshiqiufeng</groupId>
     <artifactId>framework-date</artifactId>
-    <version>1.0.1.RELEASE</version>
+    <version>1.1.0</version>
 </dependency>
 ```
 还需要使用其他util
@@ -38,10 +39,82 @@
 <dependency>
     <groupId>io.github.guoshiqiufeng</groupId>
     <artifactId>framework-core</artifactId>
-    <version>1.0.1.RELEASE</version>
+    <version>1.1.0</version>
 </dependency>
 ```
 #### 使用说明
+
+##### **阿里云OSS**
+
+pom添加依赖
+
+```xml
+<dependency>
+    <groupId>io.github.guoshiqiufeng</groupId>
+    <artifactId>oss-ali-boot-starter</artifactId>
+    <version>1.1.0</version>
+</dependency>
+```
+
+
+
+application.yml添加配置
+
+```yml
+oss:
+  enabled: true
+  bucket-name: bucket
+  prefix: prefix
+  access-key: access
+  secret-key: secret
+  domain: http://domain.oss-cn-shenzhen.aliyuncs.com
+  end-point: http://oss-cn-shenzhen.aliyuncs.com
+```
+
+Application启动类添加
+
+```java
+	@Bean
+	public AliOssSource ossSource() {
+		return new AliOssSource();
+	}
+```
+
+需要使用上传的地方
+
+```java
+@Autowired
+	private OssSource ossSource;
+
+	@PostMapping("")
+	public ResponseResult upload(@RequestParam(value = "file", required = false) MultipartFile file) throws Exception {
+		if (file == null || file.isEmpty()) {
+			throw new BusinessException("上传文件不能为空");
+		}
+		// 上传文件
+		String suffix = file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf("."));
+		String url = ossSource.uploadSuffix(file.getBytes(), "/1", suffix);
+		Map<String, String> result = Maps.newHashMap();
+		result.put("url", url);
+		result.put("prefix", ossSource.getHttpPrefix());
+		return ResponseResult.success(result);
+	}
+```
+
+输出到前端的json
+
+```json
+{
+    "code": 200,
+    "message": "成功",
+    "data": {
+        "prefix": "http://domain.oss-cn-shenzhen.aliyuncs.com",
+        "url": "/prefix/1/20210118/1d9767ccd97743e9a1109eaba15888ce.jpg"
+    }
+}
+```
+
+
 
 ##### spring boot localDateTime 序列化 反序列化
 
