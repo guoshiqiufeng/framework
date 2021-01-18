@@ -1,6 +1,5 @@
 package io.github.guoshiqiufeng.framework.boot.oss.autoconfigure;
 
-import io.github.guoshiqiufeng.framework.boot.oss.OssSource;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.util.LinkedCaseInsensitiveMap;
@@ -20,11 +19,6 @@ public class OssProperties {
      * 是否启用
      */
     private Boolean enabled;
-
-    /**
-     * 类别
-     */
-    private Class<? extends OssSource> type;
 
     /**
      * 域名
