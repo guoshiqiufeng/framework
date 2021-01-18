@@ -2,32 +2,25 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <groupId>io.github.guoshiqiufeng</groupId>
-        <artifactId>framework</artifactId>
+        <artifactId>framework-boot</artifactId>
         <version>1.1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>framework-all</artifactId>
-    <description>所有依赖</description>
+    <artifactId>oss-ali-boot-starter</artifactId>
+    <description>ali oss</description>
     <inceptionYear>2020-Now</inceptionYear>
     <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
             <groupId>io.github.guoshiqiufeng</groupId>
-            <artifactId>framework-core</artifactId>
+            <artifactId>oss-boot-starter</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>io.github.guoshiqiufeng</groupId>
-            <artifactId>framework-date</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.github.guoshiqiufeng</groupId>
-            <artifactId>framework-swagger</artifactId>
-            <version>${project.version}</version>
+            <groupId>com.aliyun.oss</groupId>
+            <artifactId>aliyun-sdk-oss</artifactId>
         </dependency>
     </dependencies>
-
 </project>

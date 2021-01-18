@@ -7,10 +7,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>framework-all</artifactId>
+    <artifactId>framework-boot</artifactId>
     <description>所有依赖</description>
     <inceptionYear>2020-Now</inceptionYear>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <dependencies>
         <dependency>
@@ -18,16 +18,10 @@
             <artifactId>framework-core</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
-            <groupId>io.github.guoshiqiufeng</groupId>
-            <artifactId>framework-date</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.github.guoshiqiufeng</groupId>
-            <artifactId>framework-swagger</artifactId>
-            <version>${project.version}</version>
-        </dependency>
     </dependencies>
 
+    <modules>
+        <module>oss-ali-boot-starter</module>
+        <module>oss-boot-starter</module>
+    </modules>
 </project>

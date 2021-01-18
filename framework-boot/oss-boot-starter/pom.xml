@@ -2,44 +2,30 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <groupId>io.github.guoshiqiufeng</groupId>
-        <artifactId>framework</artifactId>
+        <artifactId>framework-boot</artifactId>
         <version>1.1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>framework-swagger</artifactId>
-    <description>swagger相关</description>
+    <artifactId>oss-boot-starter</artifactId>
+    <description>所有依赖</description>
     <inceptionYear>2020-Now</inceptionYear>
     <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
-            <groupId>io.github.guoshiqiufeng</groupId>
-            <artifactId>framework-core</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <!-- Commons-->
-        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
         </dependency>
-        <!--guava-->
-        <dependency>
-            <groupId>com.github.ben-manes.caffeine</groupId>
-            <artifactId>guava</artifactId>
-        </dependency>
-        <!--Swagger-->
-        <dependency>
-            <groupId>com.github.xiaoymin</groupId>
-            <artifactId>knife4j-micro-spring-boot-starter</artifactId>
-        </dependency>
-        <!--spring-boot-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <scope>provided</scope>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
         </dependency>
     </dependencies>
-
 </project>
