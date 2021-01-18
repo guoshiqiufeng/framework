@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * oss 自动配置
+ *
  * @author yanghq
  * @version 1.0
  * @date 2021-01-18 10:45
