@@ -11,9 +11,10 @@
 | gitee  | https://gitee.com/fubluesky/framework.git      |      |
 
 #### 软件架构
-|              | 技术                              | 版本          |
-| ------------ | --------------------------------- | ------------- |
-| 核心框架     | Spring Boot                       | 2.3.6.RELEASE |
+|           | 技术           | 版本          |
+| --------- | -------------- | ------------- |
+| 核心框架  | Spring Boot    | 2.3.6.RELEASE |
+| 阿里云OSS | aliyun-sdk-oss | 2.8.3         |
 
 #### 模块
 
@@ -26,22 +27,7 @@
 
 
 #### 安装教程
-只需要localDate序列化、反序列化
-```xml
-<dependency>
-    <groupId>io.github.guoshiqiufeng</groupId>
-    <artifactId>framework-date</artifactId>
-    <version>1.1.0</version>
-</dependency>
-```
-还需要使用其他util
-```xml
-<dependency>
-    <groupId>io.github.guoshiqiufeng</groupId>
-    <artifactId>framework-core</artifactId>
-    <version>1.1.0</version>
-</dependency>
-```
+使用maven进行依赖安装
 #### 使用说明
 
 ##### **阿里云OSS**
@@ -52,7 +38,7 @@ pom添加依赖
 <dependency>
     <groupId>io.github.guoshiqiufeng</groupId>
     <artifactId>oss-ali-boot-starter</artifactId>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
 </dependency>
 ```
 
@@ -117,6 +103,18 @@ Application启动类添加
 
 
 ##### spring boot localDateTime 序列化 反序列化
+
+pom添加依赖
+
+```xml
+<dependency>
+    <groupId>io.github.guoshiqiufeng</groupId>
+    <artifactId>framework-date</artifactId>
+    <version>1.1.1</version>
+</dependency>
+```
+
+添加配置类
 
 ```java
 package io.github.guoshiqiufeng.demo.config;
