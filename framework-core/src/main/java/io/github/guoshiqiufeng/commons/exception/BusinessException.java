@@ -13,30 +13,49 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.github.guoshiqiufeng.framework.boot.oss.exception;
+
+package io.github.guoshiqiufeng.commons.exception;
+
+import io.github.guoshiqiufeng.commons.response.ResponseCode;
 
 import java.io.Serializable;
 
 /**
- * oss 异常
+ * 全局业务异常
  *
  * @author yanghq
  * @version 1.0
- * @date 2021-01-18 10:15
+ * @date 2021-02-04 14:40
  * @email fubluesky@foxmail.com
  */
-public class OssException extends RuntimeException implements Serializable {
+public class BusinessException extends RuntimeException implements Serializable {
 
-	private static final long serialVersionUID = 8020660430328063125L;
+	private static final long serialVersionUID = -5007706930421883255L;
 
-	public OssException() {
+	private Integer code;
+
+	public Integer getCode() {
+		return code;
 	}
 
-	public OssException(String message) {
+	public void setCode(Integer code) {
+		this.code = code;
+	}
+
+	public BusinessException() {
+	}
+
+	public BusinessException(String message) {
 		super(message);
+		this.code = -1;
 	}
 
-	public OssException(String message, Throwable e) {
+	public BusinessException(ResponseCode status) {
+		super(status.message());
+		this.code = status.code();
+	}
+
+	public BusinessException(String message, Throwable e) {
 		super(message, e);
 	}
 
