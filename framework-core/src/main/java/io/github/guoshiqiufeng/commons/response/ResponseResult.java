@@ -22,10 +22,9 @@ import java.io.Serializable;
 
 /**
  * 通用数据响应结果
- * @author yanghq
+ * @author <a href="mailto:fubluesky@foxmail.com">yanghq</a>
  * @version 1.0
- * @date 2021-02-04 14:45
- * @email fubluesky@foxmail.com
+ * @since 2021-02-04 14:45
  */
 @Data
 public class ResponseResult implements Serializable {

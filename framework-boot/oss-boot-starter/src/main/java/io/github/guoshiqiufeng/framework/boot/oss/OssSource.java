@@ -25,10 +25,9 @@ import java.util.UUID;
 /**
  * Oss扫描接口 所有实现都要实现此接口
  *
- * @author yanghq
+ * @author <a href="mailto:fubluesky@foxmail.com">yanghq</a>
  * @version 1.0
- * @date 2021-01-18 9:30
- * @email fubluesky@foxmail.com
+ * @since 2021-01-18 9:30
  */
 public interface OssSource {
 

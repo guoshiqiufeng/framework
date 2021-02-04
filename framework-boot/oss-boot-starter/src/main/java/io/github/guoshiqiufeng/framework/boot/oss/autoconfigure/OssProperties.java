@@ -23,10 +23,9 @@ import org.springframework.util.LinkedCaseInsensitiveMap;
 /**
  * 配置文件
  *
- * @author yanghq
+ * @author <a href="mailto:fubluesky@foxmail.com">yanghq</a>
  * @version 1.0
- * @date 2021-01-16 16:28
- * @email fubluesky@foxmail.com
+ * @since 2021-01-16 16:28
  */
 @Data
 @ConfigurationProperties(prefix = "oss")
