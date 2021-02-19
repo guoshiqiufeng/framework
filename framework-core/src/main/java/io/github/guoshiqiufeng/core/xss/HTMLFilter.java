@@ -1,4 +1,4 @@
-package io.github.guoshiqiufeng.commons.xss;
+package io.github.guoshiqiufeng.core.xss;
 
 import com.google.common.collect.Maps;
 

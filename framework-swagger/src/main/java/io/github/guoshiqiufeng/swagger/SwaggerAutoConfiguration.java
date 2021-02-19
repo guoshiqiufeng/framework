@@ -1,7 +1,7 @@
 package io.github.guoshiqiufeng.swagger;
 
 import com.github.xiaoymin.knife4j.spring.annotations.EnableKnife4j;
-import io.github.guoshiqiufeng.commons.utils.ListUtils;
+import io.github.guoshiqiufeng.core.utils.ListUtils;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;

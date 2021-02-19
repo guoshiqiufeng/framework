@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.github.guoshiqiufeng.commons.utils;
+package io.github.guoshiqiufeng.core.utils;
 
 import com.baomidou.mybatisplus.core.metadata.OrderItem;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import io.github.guoshiqiufeng.commons.xss.SQLFilter;
+import io.github.guoshiqiufeng.core.xss.SQLFilter;
 import org.apache.commons.lang3.StringUtils;
 
 /**
