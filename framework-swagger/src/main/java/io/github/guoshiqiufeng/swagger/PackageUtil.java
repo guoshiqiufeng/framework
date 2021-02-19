@@ -11,8 +11,8 @@ import java.util.List;
  * @author yanghq
  * @version 1.0
  * @since 2021-01-15 13:36
- * @email fubluesky@foxmail.com
  */
+@SuppressWarnings("all")
 public class PackageUtil {
 
 	/**

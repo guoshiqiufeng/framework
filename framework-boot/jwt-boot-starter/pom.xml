@@ -7,15 +7,25 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>oss-boot-starter</artifactId>
-    <description>所有依赖</description>
+    <artifactId>jwt-boot-starter</artifactId>
+    <description>jwt</description>
     <inceptionYear>2020-Now</inceptionYear>
     <packaging>jar</packaging>
 
     <dependencies>
+        <!--jwt-->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>

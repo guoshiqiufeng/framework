@@ -22,6 +22,7 @@ import java.io.Serializable;
 
 /**
  * 通用数据响应结果
+ *
  * @author <a href="mailto:fubluesky@foxmail.com">yanghq</a>
  * @version 1.0
  * @since 2021-02-04 14:45
@@ -58,9 +59,9 @@ public class ResponseResult implements Serializable {
 
 	/**
 	 * 一般的响应结果，不返回数据
-	 * @param code {@link ResponseCode}
+	 * @param code {@link BaseResponseCode}
 	 */
-	public ResponseResult(ResponseCode code) {
+	public ResponseResult(BaseResponseCode code) {
 		super();
 		this.code = code.code();
 		this.message = code.message();
@@ -68,10 +69,10 @@ public class ResponseResult implements Serializable {
 
 	/**
 	 * 一般的响应结果，不返回数据，自定义消息
-	 * @param code {@link ResponseCode}
+	 * @param code {@link BaseResponseCode}
 	 * @param message {@code String} 自定义消息
 	 */
-	public ResponseResult(ResponseCode code, String message) {
+	public ResponseResult(BaseResponseCode code, String message) {
 		super();
 		this.code = code.code();
 		this.message = message;
@@ -79,10 +80,10 @@ public class ResponseResult implements Serializable {
 
 	/**
 	 * 一般的响应结果，包含数据
-	 * @param code {@link ResponseCode}
+	 * @param code {@link BaseResponseCode}
 	 * @param data {@code Object}
 	 */
-	public ResponseResult(ResponseCode code, Object data) {
+	public ResponseResult(BaseResponseCode code, Object data) {
 		super();
 		this.code = code.code();
 		this.message = code.message();
@@ -91,11 +92,11 @@ public class ResponseResult implements Serializable {
 
 	/**
 	 * 一般的响应结果，自定义消息并包含数据
-	 * @param code {@link ResponseCode}
+	 * @param code {@link BaseResponseCode}
 	 * @param message {@link String}
 	 * @param data {@code Object}
 	 */
-	public ResponseResult(ResponseCode code, String message, Object data) {
+	public ResponseResult(BaseResponseCode code, String message, Object data) {
 		super();
 		this.code = code.code();
 		this.message = message;
@@ -104,10 +105,10 @@ public class ResponseResult implements Serializable {
 
 	/**
 	 * 异常的响应结果，返回的对象会包含 {@code throwable} 字段
-	 * @param code {@link ResponseCode}
+	 * @param code {@link BaseResponseCode}
 	 * @param throwable {@link Throwable}
 	 */
-	public ResponseResult(ResponseCode code, Throwable throwable) {
+	public ResponseResult(BaseResponseCode code, Throwable throwable) {
 		super();
 		this.code = code.code();
 		this.message = code.message();
@@ -119,7 +120,7 @@ public class ResponseResult implements Serializable {
 	 * @return this
 	 */
 	public static ResponseResult success() {
-		return new ResponseResult(ResponseCode.SUCCESS);
+		return new ResponseResult(BaseResponseCode.SUCCESS);
 	}
 
 	/**
@@ -128,7 +129,7 @@ public class ResponseResult implements Serializable {
 	 * @return this
 	 */
 	public static ResponseResult success(String message) {
-		return new ResponseResult(ResponseCode.SUCCESS, message);
+		return new ResponseResult(BaseResponseCode.SUCCESS, message);
 	}
 
 	/**
@@ -137,16 +138,16 @@ public class ResponseResult implements Serializable {
 	 * @return this
 	 */
 	public static ResponseResult success(Object data) {
-		return new ResponseResult(ResponseCode.SUCCESS, data);
+		return new ResponseResult(BaseResponseCode.SUCCESS, data);
 	}
 
 	/**
 	 * 请求成功，自定义状态码，包含数据
-	 * @param code {@link ResponseCode} 自定义状态码
+	 * @param code {@link BaseResponseCode} 自定义状态码
 	 * @param data {@code Object}
 	 * @return this
 	 */
-	public static ResponseResult success(ResponseCode code, Object data) {
+	public static ResponseResult success(BaseResponseCode code, Object data) {
 		return new ResponseResult(code, data);
 	}
 
@@ -157,7 +158,7 @@ public class ResponseResult implements Serializable {
 	 * @return this
 	 */
 	public static ResponseResult success(String message, Object data) {
-		return new ResponseResult(ResponseCode.SUCCESS, message, data);
+		return new ResponseResult(BaseResponseCode.SUCCESS, message, data);
 	}
 
 	/**
@@ -165,7 +166,7 @@ public class ResponseResult implements Serializable {
 	 * @return this
 	 */
 	public static ResponseResult failure() {
-		return new ResponseResult(ResponseCode.FAILURE);
+		return new ResponseResult(BaseResponseCode.FAILURE);
 	}
 
 	/**
@@ -174,35 +175,35 @@ public class ResponseResult implements Serializable {
 	 * @return this
 	 */
 	public static ResponseResult failure(String message) {
-		return new ResponseResult(ResponseCode.FAILURE, message);
+		return new ResponseResult(BaseResponseCode.FAILURE, message);
 	}
 
 	/**
 	 * 请求失败，自定义状态码
-	 * @param code {@link ResponseCode} 自定义状态码
+	 * @param code {@link BaseResponseCode} 自定义状态码
 	 * @return this
 	 */
-	public static ResponseResult failure(ResponseCode code) {
+	public static ResponseResult failure(BaseResponseCode code) {
 		return new ResponseResult(code);
 	}
 
 	/**
 	 * 请求失败，自定义状态码，包含异常消息
-	 * @param code {@link ResponseCode} 自定义状态码
+	 * @param code {@link BaseResponseCode} 自定义状态码
 	 * @param throwable {@link Throwable}
 	 * @return this
 	 */
-	public static ResponseResult failure(ResponseCode code, Throwable throwable) {
+	public static ResponseResult failure(BaseResponseCode code, Throwable throwable) {
 		return new ResponseResult(code, throwable);
 	}
 
 	/**
 	 * 请求失败，自定义状态码，包含数据
-	 * @param code {@link ResponseCode} 自定义状态码
+	 * @param code {@link BaseResponseCode} 自定义状态码
 	 * @param data {@code Object}
 	 * @return this
 	 */
-	public static ResponseResult failure(ResponseCode code, Object data) {
+	public static ResponseResult failure(BaseResponseCode code, Object data) {
 		return new ResponseResult(code, data);
 	}
 

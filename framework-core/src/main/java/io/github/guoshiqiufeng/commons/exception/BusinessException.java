@@ -16,7 +16,7 @@
 
 package io.github.guoshiqiufeng.commons.exception;
 
-import io.github.guoshiqiufeng.commons.response.ResponseCode;
+import io.github.guoshiqiufeng.commons.response.BaseResponseCode;
 
 import java.io.Serializable;
 
@@ -49,7 +49,7 @@ public class BusinessException extends RuntimeException implements Serializable 
 		this.code = -1;
 	}
 
-	public BusinessException(ResponseCode status) {
+	public BusinessException(BaseResponseCode status) {
 		super(status.message());
 		this.code = status.code();
 	}
