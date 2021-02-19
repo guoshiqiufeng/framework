@@ -16,17 +16,16 @@
 
 package io.github.guoshiqiufeng.commons.exception;
 
-import io.github.guoshiqiufeng.commons.response.ResponseCode;
+import io.github.guoshiqiufeng.commons.response.BaseResponseCode;
 
 import java.io.Serializable;
 
 /**
  * 全局业务异常
  *
- * @author yanghq
+ * @author <a href="mailto:fubluesky@foxmail.com">yanghq</a>
  * @version 1.0
- * @date 2021-02-04 14:40
- * @email fubluesky@foxmail.com
+ * @since 2021-02-04 14:40
  */
 public class BusinessException extends RuntimeException implements Serializable {
 
@@ -50,7 +49,7 @@ public class BusinessException extends RuntimeException implements Serializable 
 		this.code = -1;
 	}
 
-	public BusinessException(ResponseCode status) {
+	public BusinessException(BaseResponseCode status) {
 		super(status.message());
 		this.code = status.code();
 	}

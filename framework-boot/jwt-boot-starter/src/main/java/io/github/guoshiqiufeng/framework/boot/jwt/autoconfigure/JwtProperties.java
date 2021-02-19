@@ -13,30 +13,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.github.guoshiqiufeng.framework.boot.oss.exception;
+package io.github.guoshiqiufeng.framework.boot.jwt.autoconfigure;
 
-import java.io.Serializable;
+import lombok.Data;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
 
 /**
- * oss 异常
- *
+ * jwt 配置文件
  * @author <a href="mailto:fubluesky@foxmail.com">yanghq</a>
  * @version 1.0
- * @since 2021-01-18 10:15
+ * @since 2021-02-19 10:19
  */
-public class OssException extends RuntimeException implements Serializable {
+@ConfigurationProperties(prefix = "jwt")
+@Component
+@Data
+public class JwtProperties {
 
-	private static final long serialVersionUID = 8020660430328063125L;
+    /**
+     * 密钥
+     */
+    private String secret = "secret";
 
-	public OssException() {
-	}
+    /**
+     * token有效时长，单位秒
+     */
+    private long expire = 1800;
 
-	public OssException(String message) {
-		super(message);
-	}
+    /**
+     * 缓存刷新时间（单位天）
+     */
+    private int refresh = 1;
 
-	public OssException(String message, Throwable e) {
-		super(message, e);
-	}
 
 }

@@ -10,9 +10,9 @@ import java.util.List;
 /**
  * @author yanghq
  * @version 1.0
- * @date 2021-01-15 13:36
- * @email fubluesky@foxmail.com
+ * @since 2021-01-15 13:36
  */
+@SuppressWarnings("all")
 public class PackageUtil {
 
 	/**

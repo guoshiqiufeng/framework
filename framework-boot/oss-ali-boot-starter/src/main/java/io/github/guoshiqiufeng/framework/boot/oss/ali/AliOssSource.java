@@ -27,10 +27,9 @@ import java.io.InputStream;
 /**
  * 阿里云 oss
  *
- * @author yanghq
+ * @author <a href="mailto:fubluesky@foxmail.com">yanghq</a>
  * @version 1.0
- * @date 2021-01-18 10:01
- * @email fubluesky@foxmail.com
+ * @since 2021-01-18 10:01
  */
 public class AliOssSource implements OssSource {
 

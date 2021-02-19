@@ -21,6 +21,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;
 /**
  * swagger配置
  *
+ * @author yanghq
  */
 @Configuration(proxyBeanMethods = false)
 @EnableSwagger2WebMvc

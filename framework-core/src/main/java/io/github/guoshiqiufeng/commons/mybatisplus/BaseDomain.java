@@ -13,30 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.github.guoshiqiufeng.framework.boot.oss.exception;
+package io.github.guoshiqiufeng.commons.mybatisplus;
+
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
 
 import java.io.Serializable;
 
 /**
- * oss 异常
+ * 通用领域模型
  *
  * @author <a href="mailto:fubluesky@foxmail.com">yanghq</a>
  * @version 1.0
- * @since 2021-01-18 10:15
+ * @since 2021-02-05 09:43
  */
-public class OssException extends RuntimeException implements Serializable {
+@Data
+@EqualsAndHashCode(callSuper = false)
+@Accessors(chain = true)
+public abstract class BaseDomain implements Serializable {
 
-	private static final long serialVersionUID = 8020660430328063125L;
-
-	public OssException() {
-	}
-
-	public OssException(String message) {
-		super(message);
-	}
-
-	public OssException(String message, Throwable e) {
-		super(message, e);
-	}
+	private static final long serialVersionUID = -1146553274545561274L;
 
 }

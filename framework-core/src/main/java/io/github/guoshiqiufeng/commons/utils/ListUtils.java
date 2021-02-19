@@ -21,10 +21,9 @@ import java.util.List;
 /**
  * list工具类
  *
- * @author yanghq
+ * @author <a href="mailto:fubluesky@foxmail.com">yanghq</a>
  * @version 1.0
- * @date 2021-01-12 11:39
- * @email fubluesky@foxmail.com
+ * @since 2021-01-12 11:39
  */
 public class ListUtils {
 
