@@ -1,4 +1,4 @@
-package io.github.guoshiqiufeng.commons.response;
+package io.github.guoshiqiufeng.core.response;
 
 /**
  * @author <a href="mailto:fubluesky@foxmail.com">yanghq</a>

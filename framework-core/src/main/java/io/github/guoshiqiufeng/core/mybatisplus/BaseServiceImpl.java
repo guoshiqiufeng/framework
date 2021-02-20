@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.github.guoshiqiufeng.commons.mybatisplus;
+package io.github.guoshiqiufeng.core.mybatisplus;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -22,9 +22,9 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import io.github.guoshiqiufeng.commons.exception.BusinessException;
-import io.github.guoshiqiufeng.commons.response.BaseResponseCode;
-import io.github.guoshiqiufeng.commons.utils.QueryUtils;
+import io.github.guoshiqiufeng.core.exception.BusinessException;
+import io.github.guoshiqiufeng.core.response.BaseResponseCode;
+import io.github.guoshiqiufeng.core.utils.QueryUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import java.lang.reflect.Field;

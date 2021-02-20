@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package io.github.guoshiqiufeng.commons.exception;
+package io.github.guoshiqiufeng.core.exception;
 
-import io.github.guoshiqiufeng.commons.response.BaseResponseCode;
+import io.github.guoshiqiufeng.core.response.BaseResponseCode;
 
 import java.io.Serializable;
 

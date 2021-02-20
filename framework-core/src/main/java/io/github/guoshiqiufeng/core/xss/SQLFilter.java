@@ -1,6 +1,6 @@
-package io.github.guoshiqiufeng.commons.xss;
+package io.github.guoshiqiufeng.core.xss;
 
-import io.github.guoshiqiufeng.commons.exception.BusinessException;
+import io.github.guoshiqiufeng.core.exception.BusinessException;
 import org.apache.commons.lang3.StringUtils;
 
 /**
