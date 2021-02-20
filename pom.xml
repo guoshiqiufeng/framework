@@ -6,7 +6,7 @@
     <groupId>io.github.guoshiqiufeng</groupId>
     <artifactId>framework</artifactId>
     <packaging>pom</packaging>
-    <version>1.2.1</version>
+    <version>1.2.2</version>
     <inceptionYear>2020-Now</inceptionYear>
     <description>通用框架</description>
 

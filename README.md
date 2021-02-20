@@ -21,7 +21,8 @@
 | 名称         | 模块     |  |
 | ------------ | -------- | ------ |
 | 阿里云oss | oss-ali-boot-starter | |
-| 通用依赖         | framework-commons  |    |
+| jwt | jwt-boot-starter | |
+| 核心依赖   | framework-core |    |
 | 时间序列化配置         | framework-date  |    |
 
 
@@ -38,7 +39,7 @@ pom添加依赖
 <dependency>
     <groupId>io.github.guoshiqiufeng</groupId>
     <artifactId>oss-ali-boot-starter</artifactId>
-    <version>1.1.2</version>
+    <version>1.2.2</version>
 </dependency>
 ```
 
@@ -94,6 +95,54 @@ oss:
 
 
 
+##### jwt
+
+pom添加依赖
+
+```xml
+<dependency>
+    <groupId>io.github.guoshiqiufeng</groupId>
+    <artifactId>jwt-boot-starter</artifactId>
+    <version>1.2.2</version>
+</dependency>
+```
+
+
+
+application.yml添加配置
+
+```yml
+jwt:
+  # 加密秘钥
+  secret: secret
+  # token有效时长，7天，单位秒
+  expire: 604800
+  # refresh token 有效时长，10天，单位天
+  refresh: 10
+```
+
+需要使用的地方
+
+```java
+	@Autowired
+	private JwtUtils jwtUtils;
+	
+	public String getToken(CoreUser user) {
+		// 创建 token
+		String token = jwtUtils.createJwt(user.getUserId() + "", this.getUserRole(user.getUserId()));
+		// 设置 refresh token
+		int refreshTime = jwtUtils.getRefresh();
+		String userInfoJson = new Gson().toJson(user);
+		redisUtils.set(RedisKeys.getJwtUser(user.getUserId()), userInfoJson, refreshTime, TimeUnit.DAYS);
+
+		return TokenConstant.TOKEN_PREFIX + token;
+	}
+```
+
+
+
+
+
 ##### spring boot localDateTime 序列化 反序列化
 
 pom添加依赖
@@ -102,7 +151,7 @@ pom添加依赖
 <dependency>
     <groupId>io.github.guoshiqiufeng</groupId>
     <artifactId>framework-date</artifactId>
-    <version>1.1.2</version>
+    <version>1.2.2</version>
 </dependency>
 ```
 
