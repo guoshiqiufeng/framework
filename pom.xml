@@ -6,7 +6,7 @@
     <groupId>io.github.guoshiqiufeng</groupId>
     <artifactId>framework</artifactId>
     <packaging>pom</packaging>
-    <version>1.2.2</version>
+    <version>1.2.3</version>
     <inceptionYear>2020-Now</inceptionYear>
     <description>通用框架</description>
 
@@ -34,6 +34,7 @@
         <qiniu.version>7.2.23</qiniu.version>
         <aliyun.oss.version>2.8.3</aliyun.oss.version>
         <qcloud.cos.version>4.4</qcloud.cos.version>
+        <commons.net.version>3.8.0</commons.net.version>
 
         <!--io.jsonwebtoken jwt-->
         <jjwt.version>0.9.1</jjwt.version>
@@ -128,7 +129,11 @@
                     </exclusion>
                 </exclusions>
             </dependency>
-
+            <dependency>
+                <groupId>commons-net</groupId>
+                <artifactId>commons-net</artifactId>
+                <version>${commons.net.version}</version>
+            </dependency>
             <!--jwt-->
             <dependency>
                 <groupId>io.jsonwebtoken</groupId>

@@ -13,37 +13,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.github.guoshiqiufeng.framework.boot.jwt.autoconfigure;
+package io.github.guoshiqiufeng.framework.boot.ftp.exception;
 
-import lombok.Data;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
+import java.io.Serializable;
 
 /**
- * jwt 配置文件
+ * ftp 异常
  *
  * @author <a href="mailto:fubluesky@foxmail.com">yanghq</a>
  * @version 1.0
- * @since 2021-02-19 10:19
+ * @since 2021-02-23 13:15
  */
-@ConfigurationProperties(prefix = "jwt")
-@Component
-@Data
-public class JwtProperties {
+public class FtpException extends RuntimeException implements Serializable {
 
-	/**
-	 * 密钥
-	 */
-	private String secret = "secret";
+	private static final long serialVersionUID = 5592169548004496002L;
 
-	/**
-	 * token有效时长，单位秒
-	 */
-	private long expire = 1800;
+	public FtpException() {
+	}
 
-	/**
-	 * 缓存刷新时间（单位天）
-	 */
-	private int refresh = 1;
+	public FtpException(String message) {
+		super(message);
+	}
+
+	public FtpException(String message, Throwable e) {
+		super(message, e);
+	}
 
 }

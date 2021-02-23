@@ -29,6 +29,7 @@ import java.util.Date;
 
 /**
  * jwt 工具
+ *
  * @author <a href="mailto:fubluesky@foxmail.com">yanghq</a>
  * @version 1.0
  * @since 2021-02-19 10:26
@@ -125,4 +126,5 @@ public class JwtUtils {
 	public int getRefresh() {
 		return jwtProperties.getRefresh();
 	}
+
 }

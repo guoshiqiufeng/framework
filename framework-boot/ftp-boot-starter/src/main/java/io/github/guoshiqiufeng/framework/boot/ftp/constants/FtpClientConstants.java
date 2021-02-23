@@ -13,37 +13,53 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.github.guoshiqiufeng.framework.boot.jwt.autoconfigure;
+package io.github.guoshiqiufeng.framework.boot.ftp.constants;
 
 import lombok.Data;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
 
 /**
- * jwt 配置文件
+ * ftp 参数
  *
  * @author <a href="mailto:fubluesky@foxmail.com">yanghq</a>
  * @version 1.0
- * @since 2021-02-19 10:19
+ * @since 2021-02-23 13:10
  */
-@ConfigurationProperties(prefix = "jwt")
-@Component
 @Data
-public class JwtProperties {
+public class FtpClientConstants {
 
 	/**
-	 * 密钥
+	 * ip地址
 	 */
-	private String secret = "secret";
+	private String host;
 
 	/**
-	 * token有效时长，单位秒
+	 * 端口号
 	 */
-	private long expire = 1800;
+	private String port;
 
 	/**
-	 * 缓存刷新时间（单位天）
+	 * 用户名
 	 */
-	private int refresh = 1;
+	private String username;
+
+	/**
+	 * 密码
+	 */
+	private String password;
+
+	/***
+	 * 盘符
+	 */
+	private String tempDir;
+
+	/**
+	 * 是否开启私有模式
+	 */
+	private Boolean isPassive;
+
+	/**
+	 * 命名空间
+	 */
+	private String spaceName = "test";
 
 }

@@ -11,10 +11,11 @@
 | gitee  | https://gitee.com/fubluesky/framework.git      |      |
 
 #### 软件架构
-|           | 技术           | 版本  |
-| --------- | -------------- | ----- |
-| 核心框架  | Spring Boot    | 2.4.2 |
-| 阿里云OSS | aliyun-sdk-oss | 2.8.3 |
+|              | 技术           | 版本  |
+| ------------ | -------------- | ----- |
+| 核心框架     | Spring Boot    | 2.4.2 |
+| 阿里云OSS    | aliyun-sdk-oss | 2.8.3 |
+| FTP 文件上传 | commons-net    | 3.8.0 |
 
 #### 模块
 
