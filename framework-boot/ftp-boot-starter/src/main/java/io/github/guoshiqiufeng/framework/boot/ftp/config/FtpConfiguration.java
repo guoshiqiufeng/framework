@@ -34,7 +34,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @RequiredArgsConstructor
 @EnableConfigurationProperties(FtpProperties.class)
-@ConditionalOnProperty(prefix = "ftp.enabled", value = "true", matchIfMissing = true)
+@ConditionalOnProperty(prefix = "ftp", name="enabled",  havingValue = "true")
 public class FtpConfiguration {
 
 	private final FtpProperties properties;

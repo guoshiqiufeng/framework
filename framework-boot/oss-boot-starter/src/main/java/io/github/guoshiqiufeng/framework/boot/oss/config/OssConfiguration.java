@@ -34,7 +34,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @RequiredArgsConstructor
 @EnableConfigurationProperties(OssProperties.class)
-@ConditionalOnProperty(prefix = "oss.enabled", value = "true", matchIfMissing = true)
+@ConditionalOnProperty(prefix = "oss", name="enabled", havingValue = "true")
 public class OssConfiguration {
 
 	private final OssProperties properties;
