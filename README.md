@@ -96,6 +96,69 @@ oss:
 
 
 
+##### FTP文件上传
+
+pom添加依赖
+
+```xml
+<dependency>
+    <groupId>io.github.guoshiqiufeng</groupId>
+    <artifactId>ftp-boot-starter</artifactId>
+    <version>1.2.4</version>
+</dependency>
+```
+
+application.yml添加配置
+
+```yml
+ftp:
+  enabled: true #是否开启
+  http-prefix: http://192.168.1.60:88 #文件访问地址前缀
+  ftp-ip: 192.168.1.60 #ftp ip
+  ftp-port: 21 #ftp port
+  user-name: ftpuser #ftp 用户名
+  password: ftpuser #ftp 密码
+  is-passive: true #是否开启私有模式
+  temp-dir: /home/ftp_tmp #临时文件目录
+  prefix: develop #前缀 文件夹
+```
+
+需要使用上传的地方
+
+```java
+@Autowired
+	private FtpSource ftpSource;
+
+	@PostMapping("")
+	public ResponseResult upload(@RequestParam(value = "file", required = false) MultipartFile file) throws Exception {
+		if (file == null || file.isEmpty()) {
+			throw new BusinessException("上传文件不能为空");
+		}
+		// 上传文件
+		String suffix = file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf("."));
+		String url = ftpSource.uploadSuffix(file.getBytes(), "/1", suffix);
+		Map<String, String> result = Maps.newHashMap();
+		result.put("url", url);
+		result.put("prefix", ossSource.getHttpPrefix());
+		return ResponseResult.success(result);
+	}
+```
+
+输出到前端的json
+
+```json
+{
+    "code": 200,
+    "message": "成功",
+    "data": {
+        "prefix": "http://192.168.1.60:88",
+        "url": "/prefix/1/20210118/1d9767ccd97743e9a1109eaba15888ce.jpg"
+    }
+}
+```
+
+
+
 ##### jwt
 
 pom添加依赖
@@ -107,8 +170,6 @@ pom添加依赖
     <version>1.2.4</version>
 </dependency>
 ```
-
-
 
 application.yml添加配置
 
