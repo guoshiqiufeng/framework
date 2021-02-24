@@ -40,7 +40,7 @@ pom添加依赖
 <dependency>
     <groupId>io.github.guoshiqiufeng</groupId>
     <artifactId>oss-ali-boot-starter</artifactId>
-    <version>1.2.2</version>
+    <version>1.2.4</version>
 </dependency>
 ```
 
@@ -104,7 +104,7 @@ pom添加依赖
 <dependency>
     <groupId>io.github.guoshiqiufeng</groupId>
     <artifactId>jwt-boot-starter</artifactId>
-    <version>1.2.2</version>
+    <version>1.2.4</version>
 </dependency>
 ```
 
@@ -152,7 +152,7 @@ pom添加依赖
 <dependency>
     <groupId>io.github.guoshiqiufeng</groupId>
     <artifactId>framework-date</artifactId>
-    <version>1.2.2</version>
+    <version>1.2.4</version>
 </dependency>
 ```
 
