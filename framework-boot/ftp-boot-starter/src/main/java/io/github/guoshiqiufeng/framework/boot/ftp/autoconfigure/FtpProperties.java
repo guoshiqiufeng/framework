@@ -13,37 +13,76 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.github.guoshiqiufeng.framework.boot.jwt.autoconfigure;
+package io.github.guoshiqiufeng.framework.boot.ftp.autoconfigure;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
+import org.springframework.util.LinkedCaseInsensitiveMap;
 
 /**
- * jwt 配置文件
+ * 配置文件
  *
  * @author <a href="mailto:fubluesky@foxmail.com">yanghq</a>
  * @version 1.0
- * @since 2021-02-19 10:19
+ * @since 2021-02-23 13:28
  */
-@ConfigurationProperties(prefix = "jwt")
-@Component
 @Data
-public class JwtProperties {
+@ConfigurationProperties(prefix = "ftp")
+public class FtpProperties {
 
 	/**
-	 * 密钥
+	 * 是否启用
 	 */
-	private String secret = "secret";
+	private Boolean enabled;
 
 	/**
-	 * token有效时长，单位秒
+	 * ftp外网访问地址前缀
 	 */
-	private long expire = 1800;
+	private String httpPrefix;
 
 	/**
-	 * 缓存刷新时间（单位天）
+	 * ftp Ip
 	 */
-	private int refresh = 1;
+	private String ftpIp;
+
+	/**
+	 * ftp Ip
+	 */
+	private String ftpPort;
+
+	/**
+	 * 用户名
+	 */
+	private String userName;
+
+	/**
+	 * 密码
+	 */
+	private String password;
+
+	/**
+	 * 超时时间
+	 */
+	private String connectionTimeout;
+
+	/**
+	 * 是否私有模式
+	 */
+	private Boolean isPassive;
+
+	/**
+	 * 临时目录
+	 */
+	private String tempDir;
+
+	/**
+	 * 路径前缀
+	 */
+	private String prefix;
+
+	/**
+	 * 自定义参数
+	 */
+	private LinkedCaseInsensitiveMap<Object> args;
 
 }

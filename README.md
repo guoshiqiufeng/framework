@@ -11,10 +11,11 @@
 | gitee  | https://gitee.com/fubluesky/framework.git      |      |
 
 #### 软件架构
-|           | 技术           | 版本  |
-| --------- | -------------- | ----- |
-| 核心框架  | Spring Boot    | 2.4.2 |
-| 阿里云OSS | aliyun-sdk-oss | 2.8.3 |
+|              | 技术           | 版本  |
+| ------------ | -------------- | ----- |
+| 核心框架     | Spring Boot    | 2.4.2 |
+| 阿里云OSS    | aliyun-sdk-oss | 2.8.3 |
+| FTP 文件上传 | commons-net    | 3.8.0 |
 
 #### 模块
 
@@ -39,7 +40,7 @@ pom添加依赖
 <dependency>
     <groupId>io.github.guoshiqiufeng</groupId>
     <artifactId>oss-ali-boot-starter</artifactId>
-    <version>1.2.2</version>
+    <version>1.2.4</version>
 </dependency>
 ```
 
@@ -103,7 +104,7 @@ pom添加依赖
 <dependency>
     <groupId>io.github.guoshiqiufeng</groupId>
     <artifactId>jwt-boot-starter</artifactId>
-    <version>1.2.2</version>
+    <version>1.2.4</version>
 </dependency>
 ```
 
@@ -151,7 +152,7 @@ pom添加依赖
 <dependency>
     <groupId>io.github.guoshiqiufeng</groupId>
     <artifactId>framework-date</artifactId>
-    <version>1.2.2</version>
+    <version>1.2.4</version>
 </dependency>
 ```
 

@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.github.guoshiqiufeng.framework.boot.oss.config;
+package io.github.guoshiqiufeng.framework.boot.ftp.config;
 
-import io.github.guoshiqiufeng.framework.boot.oss.OssSource;
-import io.github.guoshiqiufeng.framework.boot.oss.autoconfigure.OssProperties;
+import io.github.guoshiqiufeng.framework.boot.ftp.FtpSource;
+import io.github.guoshiqiufeng.framework.boot.ftp.autoconfigure.FtpProperties;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -25,27 +25,24 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * oss 自动配置
+ * ftp 自动配置
  *
  * @author <a href="mailto:fubluesky@foxmail.com">yanghq</a>
  * @version 1.0
- * @since 2021-01-18 10:45
+ * @since 2021-02-23 13:32
  */
 @Configuration
 @RequiredArgsConstructor
-@EnableConfigurationProperties(OssProperties.class)
-@ConditionalOnProperty(prefix = "oss", name="enabled", havingValue = "true")
-public class OssConfiguration {
+@EnableConfigurationProperties(FtpProperties.class)
+@ConditionalOnProperty(prefix = "ftp", name="enabled",  havingValue = "true")
+public class FtpConfiguration {
 
-	private final OssProperties properties;
+	private final FtpProperties properties;
 
 	@Bean
-	@ConditionalOnMissingBean(OssSource.class)
-	public OssSource ossSource() throws IllegalAccessException, InstantiationException {
-		if (properties.getType() == null) {
-			throw new RuntimeException("oss init fail, type is null !");
-		}
-		return properties.getType().newInstance();
+	@ConditionalOnMissingBean(FtpSource.class)
+	public FtpSource ftpSource() throws IllegalAccessException, InstantiationException {
+		return new FtpSource();
 	}
 
 }
