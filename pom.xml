@@ -6,7 +6,7 @@
     <groupId>io.github.guoshiqiufeng</groupId>
     <artifactId>framework</artifactId>
     <packaging>pom</packaging>
-    <version>1.2.4</version>
+    <version>1.2.5</version>
     <inceptionYear>2020-Now</inceptionYear>
     <description>通用框架</description>
 
@@ -36,8 +36,11 @@
         <qcloud.cos.version>4.4</qcloud.cos.version>
         <commons.net.version>3.8.0</commons.net.version>
 
-        <!--io.jsonwebtoken jwt-->
+        <!-- io.jsonwebtoken jwt -->
         <jjwt.version>0.9.1</jjwt.version>
+
+        <!-- 极光推送 -->
+        <jpush.version>3.4.7</jpush.version>
 
         <!--插件-->
         <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
@@ -139,6 +142,12 @@
                 <groupId>io.jsonwebtoken</groupId>
                 <artifactId>jjwt</artifactId>
                 <version>${jjwt.version}</version>
+            </dependency>
+            <!--极光推送-->
+            <dependency>
+                <groupId>cn.jpush.api</groupId>
+                <artifactId>jpush-client</artifactId>
+                <version>${jpush.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
