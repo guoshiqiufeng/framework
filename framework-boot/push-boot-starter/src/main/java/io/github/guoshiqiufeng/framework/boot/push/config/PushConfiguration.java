@@ -41,7 +41,7 @@ public class PushConfiguration {
 
 	@Bean
 	@ConditionalOnMissingBean(PushSource.class)
-	public PushSource ossSource() throws IllegalAccessException, InstantiationException {
+	public PushSource pushSource() throws IllegalAccessException, InstantiationException {
 		if (properties.getType() == null) {
 			throw new RuntimeException("oss init fail, type is null !");
 		}
