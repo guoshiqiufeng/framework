@@ -45,7 +45,7 @@ public class MysqlCoreConfig {
 	/**
 	 * 设置一个数据库的连接池
 	 */
-	@Bean("mysqlCoreDataSource")
+	@Bean("dataSource")
 	public DataSource mysqlCoreDataSource() {
 		HikariDataSource dataSource = new HikariDataSource();
 		dataSource.setUsername(properties.getJdbcUserName());
