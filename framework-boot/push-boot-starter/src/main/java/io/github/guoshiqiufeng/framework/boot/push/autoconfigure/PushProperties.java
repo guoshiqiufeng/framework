@@ -33,7 +33,7 @@ public class PushProperties {
 	/**
 	 * 是否启用
 	 */
-	private Boolean enabled;
+	private Boolean enabled = false;
 
 	/**
 	 * 类别

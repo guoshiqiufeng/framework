@@ -21,6 +21,7 @@
     </dependencies>
 
     <modules>
+        <module>core-boot-start</module>
         <module>ftp-boot-starter</module>
         <module>jwt-boot-starter</module>
         <module>oss-ali-boot-starter</module>
