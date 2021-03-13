@@ -26,7 +26,18 @@ pom添加依赖
 
 ##### **MysqlCoreConfiguration**
 
-注意：本模块会根据配置自动装配dataSource,配置文件可通过```app.properties```、```application.properties```、```application.yml```三个配置文件进行单参数覆盖，即```application.yml```中配置的mysql.core下的配置会覆盖```application.properties```中的mysql.core下的配置，同理也会覆盖```app.properties```
+注意：
+
+1. 本模块会根据配置自动装配dataSource,配置文件可通过```app.properties```、```application.properties```、```application.yml```三个配置文件进行单参数覆盖，即```application.yml```中配置的mysql.core下的配置会覆盖```application.properties```中的mysql.core下的配置，同理也会覆盖```app.properties```
+
+2. 若项目本身引用了jdbc自动注入相关如mybatis-plus等，则需要在application.yml或application.properties进行不自动化配置相关模块，配置如下
+
+   ```yml
+   spring:
+     # 指定默认不自动化配置相关模块
+     autoconfigure:
+       exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+   ```
 
 application.yml或application.properties添加开启配置，开启自动装配
 
