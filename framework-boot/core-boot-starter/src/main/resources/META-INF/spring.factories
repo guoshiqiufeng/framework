@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  io.github.guoshiqiufeng.framework.boot.core.mysql.config.MysqlCoreConfiguration

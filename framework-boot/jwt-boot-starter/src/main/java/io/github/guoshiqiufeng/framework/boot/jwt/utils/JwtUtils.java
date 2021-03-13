@@ -45,7 +45,7 @@ public class JwtUtils {
 	 * 生成JWT
 	 * @param id id
 	 * @param subject 载荷内容
-	 * @return
+	 * @return token
 	 */
 	public String createJwt(String id, String subject) {
 		long nowMillis = System.currentTimeMillis();
