@@ -5,10 +5,10 @@
 
 #### 项目源码
 
-|        | 源码地址                                       |      |
-| ------ | ---------------------------------------------- | ---- |
-| github | https://github.com/guoshiqiufeng/framework.git |      |
-| gitee  | https://gitee.com/fubluesky/framework.git      |      |
+|        | 源码地址                                       |
+| ------ | ---------------------------------------------- |
+| github | https://github.com/guoshiqiufeng/framework.git |
+| gitee  | https://gitee.com/fubluesky/framework.git      |
 
 #### 软件架构
 |              | 技术           | 版本  |
@@ -19,13 +19,13 @@
 
 #### 模块
 
-| 名称         | 模块     |  |
-| ------------ | -------- | ------ |
-| 核心自动装配 | core-boot-starter | |
-| 阿里云oss | oss-ali-boot-starter | |
-| jwt | jwt-boot-starter | |
-| 核心依赖   | framework-core |    |
-| 时间序列化配置         | framework-date  |    |
+| 名称         | 模块     |
+| ------------ | -------- |
+| 核心自动装配 | core-boot-starter |
+| 阿里云oss | oss-ali-boot-starter |
+| jwt | jwt-boot-starter |
+| 核心依赖   | framework-core |
+| 时间序列化配置         | framework-date  |
 
 
 
@@ -37,67 +37,9 @@
 
 [使用说明](framework-boot/core-boot-starter/README.md)
 
-##### **阿里云OSS**
+##### **oss-ali-boot-starter**
 
-pom添加依赖
-
-```xml
-<dependency>
-    <groupId>io.github.guoshiqiufeng</groupId>
-    <artifactId>oss-ali-boot-starter</artifactId>
-    <version>1.2.4</version>
-</dependency>
-```
-
-
-
-application.yml添加配置
-
-```yml
-oss:
-  enabled: true
-  type: io.github.guoshiqiufeng.framework.boot.oss.ali.AliOssSource
-  bucket-name: bucket
-  prefix: prefix
-  access-key: access
-  secret-key: secret
-  domain: http://domain.oss-cn-shenzhen.aliyuncs.com
-  end-point: http://oss-cn-shenzhen.aliyuncs.com
-```
-
-需要使用上传的地方
-
-```java
-@Autowired
-	private OssSource ossSource;
-
-	@PostMapping("")
-	public ResponseResult upload(@RequestParam(value = "file", required = false) MultipartFile file) throws Exception {
-		if (file == null || file.isEmpty()) {
-			throw new BusinessException("上传文件不能为空");
-		}
-		// 上传文件
-		String suffix = file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf("."));
-		String url = ossSource.uploadSuffix(file.getBytes(), "/1", suffix);
-		Map<String, String> result = Maps.newHashMap();
-		result.put("url", url);
-		result.put("prefix", ossSource.getHttpPrefix());
-		return ResponseResult.success(result);
-	}
-```
-
-输出到前端的json
-
-```json
-{
-    "code": 200,
-    "message": "成功",
-    "data": {
-        "prefix": "http://domain.oss-cn-shenzhen.aliyuncs.com",
-        "url": "/prefix/1/20210118/1d9767ccd97743e9a1109eaba15888ce.jpg"
-    }
-}
-```
+[使用说明](framework-boot/oss-ali-boot-starter/README.md)
 
 
 
