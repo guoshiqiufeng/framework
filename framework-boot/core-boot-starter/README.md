@@ -53,4 +53,4 @@ mysql:
 | mysql.core.connectionTimeout   | 接池分配连接的最大时长（毫秒） | 默认30000                                |
 | mysql.core.connectionTestQuery | 测试查询sql                    | 默认"SELECT 1"                           |
 
-**注意：**1.3.0版本只支持 Hikari 连接池
+**注意：** 1.3.0版本只支持 Hikari 连接池
