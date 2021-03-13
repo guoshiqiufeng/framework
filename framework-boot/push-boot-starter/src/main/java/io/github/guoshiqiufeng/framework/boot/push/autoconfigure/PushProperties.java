@@ -13,23 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.github.guoshiqiufeng.framework.boot.oss.autoconfigure;
+package io.github.guoshiqiufeng.framework.boot.push.autoconfigure;
 
-import io.github.guoshiqiufeng.framework.boot.oss.OssSource;
+import io.github.guoshiqiufeng.framework.boot.push.PushSource;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.util.LinkedCaseInsensitiveMap;
 
 /**
- * 配置文件
+ * 推送配置文件
  *
  * @author <a href="mailto:fubluesky@foxmail.com">yanghq</a>
  * @version 1.0
- * @since 2021-01-16 16:28
+ * @since 2021-02-25 9:25
  */
 @Data
-@ConfigurationProperties(prefix = "oss")
-public class OssProperties {
+@ConfigurationProperties(prefix = "push")
+public class PushProperties {
 
 	/**
 	 * 是否启用
@@ -39,51 +38,26 @@ public class OssProperties {
 	/**
 	 * 类别
 	 */
-	private Class<? extends OssSource> type;
+	private Class<? extends PushSource> type;
 
 	/**
-	 * 域名
+	 * secret
 	 */
-	private String domain;
+	private String secret;
 
 	/**
-	 * 路径前缀
+	 * appKey 设置 groupAppKey 后, appKey会忽略
 	 */
-	private String prefix;
+	private String appKey;
 
 	/**
-	 * ACCESS_KEY
+	 * groupSecret
 	 */
-	private String accessKey;
+	private String groupSecret;
 
 	/**
-	 * SECRET_KEY
+	 * groupAppKey 设置 groupAppKey 后, appKey会忽略
 	 */
-	private String secretKey;
-
-	/**
-	 * 存储空间名
-	 */
-	private String bucketName;
-
-	/**
-	 * EndPoint
-	 */
-	private String endPoint;
-
-	/**
-	 * AppId
-	 */
-	private Integer appId;
-
-	/**
-	 * 腾讯云COS所属地区
-	 */
-	private String region;
-
-	/**
-	 * 自定义参数
-	 */
-	private LinkedCaseInsensitiveMap<Object> args;
+	private String groupAppKey;
 
 }

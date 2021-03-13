@@ -21,6 +21,7 @@
 
 | 名称         | 模块     |  |
 | ------------ | -------- | ------ |
+| 核心自动装配 | core-boot-starter | |
 | 阿里云oss | oss-ali-boot-starter | |
 | jwt | jwt-boot-starter | |
 | 核心依赖   | framework-core |    |
@@ -31,6 +32,10 @@
 #### 安装教程
 使用maven进行依赖安装
 #### 使用说明
+
+##### core-boot-starter
+
+[使用说明](framework-boot/core-boot-starter/README.md)
 
 ##### **阿里云OSS**
 

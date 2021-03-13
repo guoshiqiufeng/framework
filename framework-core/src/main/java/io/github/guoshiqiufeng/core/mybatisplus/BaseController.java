@@ -111,8 +111,8 @@ public abstract class BaseController<T extends BaseDomain, S extends IBaseServic
 
 	/**
 	 * 分页
-	 * @param current {@code int} 页码
-	 * @param size {@code int} 笔数
+	 * @param page {@code int} 页码
+	 * @param limit {@code int} 笔数
 	 * @return {@link ResponseResult}
 	 */
 	@GetMapping("page")

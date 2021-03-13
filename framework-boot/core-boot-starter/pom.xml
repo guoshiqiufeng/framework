@@ -7,8 +7,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>ftp-boot-starter</artifactId>
-    <description>ftp upload</description>
+    <artifactId>core-boot-starter</artifactId>
+    <description>核心封装 包含mysql 等</description>
     <inceptionYear>2020-Now</inceptionYear>
     <packaging>jar</packaging>
 
@@ -28,12 +28,9 @@
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>commons-net</groupId>
-            <artifactId>commons-net</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>

@@ -33,7 +33,7 @@ public class FtpProperties {
 	/**
 	 * 是否启用
 	 */
-	private Boolean enabled;
+	private Boolean enabled = false;
 
 	/**
 	 * ftp外网访问地址前缀

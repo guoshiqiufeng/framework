@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.github.guoshiqiufeng.framework.boot.oss.config;
+package io.github.guoshiqiufeng.framework.boot.push.config;
 
-import io.github.guoshiqiufeng.framework.boot.oss.OssSource;
-import io.github.guoshiqiufeng.framework.boot.oss.autoconfigure.OssProperties;
+import io.github.guoshiqiufeng.framework.boot.push.PushSource;
+import io.github.guoshiqiufeng.framework.boot.push.autoconfigure.PushProperties;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -25,23 +25,23 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * oss 自动配置
+ * push 自动配置
  *
  * @author <a href="mailto:fubluesky@foxmail.com">yanghq</a>
  * @version 1.0
- * @since 2021-01-18 10:45
+ * @since 2021-02-25 9:27
  */
 @Configuration
 @RequiredArgsConstructor
-@EnableConfigurationProperties(OssProperties.class)
-@ConditionalOnProperty(prefix = "oss", name = "enabled", havingValue = "true")
-public class OssConfiguration {
+@EnableConfigurationProperties(PushProperties.class)
+@ConditionalOnProperty(prefix = "push", name = "enabled", havingValue = "true")
+public class PushConfiguration {
 
-	private final OssProperties properties;
+	private final PushProperties properties;
 
 	@Bean
-	@ConditionalOnMissingBean(OssSource.class)
-	public OssSource ossSource() throws IllegalAccessException, InstantiationException {
+	@ConditionalOnMissingBean(PushSource.class)
+	public PushSource pushSource() throws IllegalAccessException, InstantiationException {
 		if (properties.getType() == null) {
 			throw new RuntimeException("oss init fail, type is null !");
 		}
