@@ -44,9 +44,9 @@ import javax.sql.DataSource;
 @Configuration
 @ConfigurationProperties(prefix = "mysql.core")
 @PropertySources({ @PropertySource("classpath:mysql-core-jdbc.properties"),
-		@PropertySource(value = {"classpath:app.properties"}, ignoreResourceNotFound = true),
-		@PropertySource(value = {"classpath:application.properties"}, ignoreResourceNotFound = true),
-		@PropertySource(value = {"classpath:application.yml"}, ignoreResourceNotFound = true) })
+		@PropertySource(value = { "classpath:app.properties" }, ignoreResourceNotFound = true),
+		@PropertySource(value = { "classpath:application.properties" }, ignoreResourceNotFound = true),
+		@PropertySource(value = { "classpath:application.yml" }, ignoreResourceNotFound = true) })
 @ConditionalOnProperty(prefix = "mysql.core", name = "enabled", havingValue = "true")
 public class MysqlCoreConfiguration {
 

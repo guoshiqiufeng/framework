@@ -99,6 +99,16 @@ public class BaseResponseCode {
 	 */
 	public final static BaseResponseCode USER_HAS_EXISTED = new BaseResponseCode(21005, "用户已存在");
 
+	/**
+	 * 手机号码已存在
+	 */
+	public final static BaseResponseCode MOBILE_HAS_EXISTED = new BaseResponseCode(21006, "手机号码已存在");
+
+	/**
+	 * 短信验证码错误或已失效
+	 */
+	public final static BaseResponseCode MOBILE_LOGIN_ERROR = new BaseResponseCode(21007, "短信验证码错误或已失效，请重新获取");
+
 	// ------------------------------------------------------- 用户错误：20001-29999 End
 
 	// ------------------------------------------------------- 业务错误：30001-39999 Start
