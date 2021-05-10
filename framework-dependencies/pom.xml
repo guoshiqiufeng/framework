@@ -4,6 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.guoshiqiufeng</groupId>
     <artifactId>framework-dependencies</artifactId>
+    <name>framework-dependencies</name>
     <version>1.3.2</version>
     <description>依赖版本统一配置</description>
     <inceptionYear>2020-Now</inceptionYear>
