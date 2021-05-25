@@ -1,2 +1,4 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  io.github.guoshiqiufeng.framework.boot.core.mysql.config.MysqlCoreConfiguration
+  io.github.guoshiqiufeng.framework.boot.core.mysql.config.MysqlCoreConfiguration,\
+  io.github.guoshiqiufeng.framework.boot.core.redis.config.RedisConfig,\
+  io.github.guoshiqiufeng.framework.boot.core.redis.utils.RedisUtils

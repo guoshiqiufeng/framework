@@ -1,0 +1,5 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  io.github.guoshiqiufeng.framework.boot.file.utils.FileUrlUtils,\
+  io.github.guoshiqiufeng.framework.boot.file.utils.ImageUtils,\
+  io.github.guoshiqiufeng.framework.boot.file.utils.SpringContextUtils,\
+  io.github.guoshiqiufeng.framework.boot.file.utils.UploadUtils
