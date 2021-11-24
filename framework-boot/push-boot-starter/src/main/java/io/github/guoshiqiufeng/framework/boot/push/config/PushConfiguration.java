@@ -24,6 +24,9 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+
 /**
  * push 自动配置
  *
@@ -41,11 +44,12 @@ public class PushConfiguration {
 
 	@Bean
 	@ConditionalOnMissingBean(PushSource.class)
-	public PushSource pushSource() throws IllegalAccessException, InstantiationException {
+	public PushSource pushSource() throws IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
 		if (properties.getType() == null) {
-			throw new RuntimeException("oss init fail, type is null !");
+			throw new RuntimeException("push init fail, type is null !");
 		}
-		return properties.getType().newInstance();
+		Constructor<? extends PushSource> cons = properties.getType().getConstructor(PushProperties.class);
+		return cons.newInstance(properties);
 	}
 
 }

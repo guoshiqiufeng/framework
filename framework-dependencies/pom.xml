@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>io.github.guoshiqiufeng</groupId>
+    <artifactId>framework-dependencies</artifactId>
+    <name>framework-dependencies</name>
+    <version>1.3.7</version>
+    <description>依赖版本统一配置</description>
+    <inceptionYear>2020-Now</inceptionYear>
+    <packaging>pom</packaging>
+    <url>https://github.com/guoshiqiufeng</url>
+
+    <properties>
+        <framework.version>1.3.7</framework.version>
+        <mybatis-plus.version>3.4.2</mybatis-plus.version>
+        <swagger.fox.version>3.0.0</swagger.fox.version>
+        <knife4j.version>3.0.2</knife4j.version>
+
+        <!-- Cloud Service -->
+        <qiniu.version>7.2.23</qiniu.version>
+        <aliyun.oss.version>2.8.3</aliyun.oss.version>
+        <qcloud.cos.version>4.4</qcloud.cos.version>
+        <commons.net.version>3.8.0</commons.net.version>
+
+        <poi.version>3.17</poi.version>
+
+        <!-- io.jsonwebtoken jwt -->
+        <jjwt.version>0.9.1</jjwt.version>
+
+        <!-- 极光推送 -->
+        <jpush.version>3.4.7</jpush.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!--framework-->
+            <dependency>
+                <groupId>io.github.guoshiqiufeng</groupId>
+                <artifactId>framework-all</artifactId>
+                <version>${framework.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.guoshiqiufeng</groupId>
+                <artifactId>core-boot-starter</artifactId>
+                <version>${framework.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.guoshiqiufeng</groupId>
+                <artifactId>framework-date</artifactId>
+                <version>${framework.version}</version>
+            </dependency>
+            <!--mybatis-plus-->
+            <dependency>
+                <groupId>io.github.guoshiqiufeng</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${framework.version}</version>
+            </dependency>
+            <!--jwt-->
+            <dependency>
+                <groupId>io.github.guoshiqiufeng</groupId>
+                <artifactId>jwt-boot-starter</artifactId>
+                <version>${framework.version}</version>
+            </dependency>
+            <!--oss-->
+            <dependency>
+                <groupId>io.github.guoshiqiufeng</groupId>
+                <artifactId>oss-ali-boot-starter</artifactId>
+                <version>${framework.version}</version>
+            </dependency>
+            <!--ftp-->
+            <dependency>
+                <groupId>io.github.guoshiqiufeng</groupId>
+                <artifactId>ftp-boot-starter</artifactId>
+                <version>${framework.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.guoshiqiufeng</groupId>
+                <artifactId>file-boot-starter</artifactId>
+                <version>${framework.version}</version>
+            </dependency>
+            <!--push-->
+            <dependency>
+                <groupId>io.github.guoshiqiufeng</groupId>
+                <artifactId>push-boot-starter</artifactId>
+                <version>${framework.version}</version>
+            </dependency>
+            <!--mybatis-plus-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-core</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-generator</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <!--knife4j-->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-micro-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+            <!--springfox-->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${swagger.fox.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger.fox.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-oas</artifactId>
+                <version>${swagger.fox.version}</version>
+            </dependency>
+            <!--oss-->
+            <dependency>
+                <groupId>com.qiniu</groupId>
+                <artifactId>qiniu-java-sdk</artifactId>
+                <version>${qiniu.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aliyun.oss</groupId>
+                <artifactId>aliyun-sdk-oss</artifactId>
+                <version>${aliyun.oss.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.qcloud</groupId>
+                <artifactId>cos_api</artifactId>
+                <version>${qcloud.cos.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-log4j12</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>commons-net</groupId>
+                <artifactId>commons-net</artifactId>
+                <version>${commons.net.version}</version>
+            </dependency>
+            <!--jwt-->
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
+            <!--极光推送-->
+            <dependency>
+                <groupId>cn.jpush.api</groupId>
+                <artifactId>jpush-client</artifactId>
+                <version>${jpush.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.bouncycastle</groupId>
+                        <artifactId>bcprov-jdk15on</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.bouncycastle</groupId>
+                        <artifactId>bcpkix-jdk15on</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.bouncycastle</groupId>
+                <artifactId>bcprov-jdk15on</artifactId>
+                <version>1.68</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bouncycastle</groupId>
+                <artifactId>bcpkix-jdk15on</artifactId>
+                <version>1.68</version>
+            </dependency>
+            <!-- excel依赖 -->
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi</artifactId>
+                <version>${poi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>${poi.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <!--scm信息-->
+    <scm>
+        <url>https://github.com/guoshiqiufeng/framework.git</url>
+        <connection>scm:git:https://github.com/guoshiqiufeng/framework.git</connection>
+        <developerConnection>scm:git:https://github.com/guoshiqiufeng/framework.git</developerConnection>
+    </scm>
+
+    <licenses>
+        <license>
+            <name>Apache 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>yanghq</id>
+            <name>fubluesky</name>
+            <email>fubluesky@foxmail.com</email>
+        </developer>
+    </developers>
+
+    <distributionManagement>
+        <repository>
+            <id>sonatype-nexus-releases</id>
+            <name>Sonatype Nexus Release</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+        </repository>
+
+        <snapshotRepository>
+            <id>sonatype-nexus-snapshots</id>
+            <name>Sonatype Nexus SNAPSHOTS</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <build>
+        <plugins>
+            <!-- gpg plugin,用于签名认证 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.6</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!--staging plugin-->
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.7</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>sonatype-nexus-releases</serverId>
+                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
+            </plugin>
+            <!-- release plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

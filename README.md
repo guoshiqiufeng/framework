@@ -3,12 +3,7 @@
 #### 介绍
 通用框架
 
-#### 项目源码
-
-|        | 源码地址                                       |
-| ------ | ---------------------------------------------- |
-| github | https://github.com/guoshiqiufeng/framework.git |
-| gitee  | https://gitee.com/fubluesky/framework.git      |
+本项目已暂停维护，建议改用 [kernel][https://github.com/guoshiqiufeng/kernel/]
 
 #### 软件架构
 |              | 技术           | 版本  |

@@ -3,12 +3,12 @@
     <parent>
         <groupId>io.github.guoshiqiufeng</groupId>
         <artifactId>framework-boot</artifactId>
-        <version>1.3.1</version>
+        <version>1.3.7</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>core-boot-starter</artifactId>
-    <description>核心封装 包含mysql 等</description>
+    <description>核心封装 包含mysql、redis</description>
     <inceptionYear>2020-Now</inceptionYear>
     <packaging>jar</packaging>
 
@@ -30,6 +30,17 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <!--redis-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
             <scope>provided</scope>
         </dependency>
     </dependencies>

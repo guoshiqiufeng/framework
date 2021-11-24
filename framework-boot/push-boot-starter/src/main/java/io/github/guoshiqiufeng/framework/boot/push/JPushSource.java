@@ -13,7 +13,6 @@ import cn.jpush.api.push.model.audience.Audience;
 import io.github.guoshiqiufeng.framework.boot.push.autoconfigure.PushProperties;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 import java.util.Map;
@@ -38,8 +37,14 @@ public class JPushSource implements PushSource {
 
 	private JPushClient jPushClient = null;
 
-	@Autowired
 	private PushProperties pushProperties;
+
+	public JPushSource() {}
+
+	public JPushSource(PushProperties pushProperties) {
+		this.pushProperties = pushProperties;
+		init();
+	}
 
 	private void init() {
 		// 初始化
